@@ -1,0 +1,11 @@
+development: &postgresql
+  adapter: postgresql
+  database: dummy_development
+  pool: 5
+  timeout: 5000
+  logger: true
+
+test:
+  <<: *postgresql
+  database: dummy_test
+  logger: false
